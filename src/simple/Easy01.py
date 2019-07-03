@@ -10,7 +10,11 @@ class Easy01:
         self._x = 0
         # TODO: implement your method here
 
+    def get_me_to_pass02(self, a_list):
+        return None
 
+    def get_me_to_pass03(self, some_dictionary):
+        return None
 
 
 if __name__ == '__main__':

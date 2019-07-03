@@ -23,6 +23,23 @@ class Test(unittest.TestCase):
 
         self.assertGreater(changed_x, initial_x)
 
+    def test_get_me_to_pass02_positive(self):
+        my_list = [1, 2, 3]
+        expected_list = [2, 4, 6]
+        self.easy.get_me_to_pass02(my_list)
+        self.assertListEqual(my_list, expected_list)
+
+    def test_get_me_to_pass02_empty(self):
+        my_list = []
+        self.easy.get_me_to_pass02(my_list)
+        self.assertListEqual(my_list, [])
+
+    def test_get_me_to_pass02_weird_input(self):
+        with self.assertRaises(Exception) as context:
+            self.easy.get_me_to_pass02("hey")
+
+        self.assertTrue('Malformed input' in context.exception)
+
 
 if __name__ == '__main__':
     unittest.main()
