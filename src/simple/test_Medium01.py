@@ -15,7 +15,7 @@ class Test(unittest.TestCase):
         random_number = random.randint(1, 100000)
 
         my_dictionary = {random_string: random_number}
-        expected = '{{"{}":{}}}'.format(random_string, random_number)
+        expected = '{{"{}": {}}}'.format(random_string, random_number)
 
         result = self.medium.make_me_pass01(my_dictionary)
         self.assertEqual(result, expected)
