@@ -41,5 +41,3 @@ class Test(unittest.TestCase):
         self.assertTrue('Malformed input' in context.exception)
 
 
-if __name__ == '__main__':
-    unittest.main()
