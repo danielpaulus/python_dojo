@@ -26,6 +26,6 @@ class Test(unittest.TestCase):
         fake_email = ''.join(random.choice(letters) for i in range(10))
         my_login = {"email": fake_email, "password": 123456789}
         email_regex = '/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/'
-        test = re.search(my_login["email"], email_regex)
+        test = re.fullmatch(email_regex, my_login["email"])
         result = self.medium.make_me_pass02(my_login)
         self.assertEqual(result, test)
