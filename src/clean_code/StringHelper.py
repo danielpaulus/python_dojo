@@ -10,6 +10,7 @@ class StringHelper:
         if len(first_word) != len(second_word):
             return False
         for letter in first_word:
+            #TODO convert to lowercase
             if letter not in second_word:
                 return False
         return True
