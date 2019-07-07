@@ -9,8 +9,8 @@ class StringHelper:
         """
         if len(first_word) != len(second_word):
             return False
-        for letter in first_word:
+        for letter in first_word.lower():
             #TODO convert to lowercase
-            if letter not in second_word:
+            if letter not in second_word.lower():
                 return False
         return True
