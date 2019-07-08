@@ -25,4 +25,9 @@ class Test(unittest.TestCase):
         result = self.string_helper.strings_are_anagrams(self.anagram1, anagram_capitalized)
         self.assertTrue(result)
 
+    def test_strings_are_anagrams_integer(self):
+        example_int = 2
+        self.assertRaises(TypeError, self.string_helper.strings_are_anagrams, self.anagram1, example_int )
+
+
 

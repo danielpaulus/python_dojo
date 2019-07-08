@@ -8,7 +8,7 @@ class StringHelper:
         :return: True if the words are an Anagram, False otherwise
         """
         if type(first_word) is not str or type(second_word) is not str:
-            raise TypeError("Not a string")
+            raise TypeError('Not a string')
 
         if len(first_word) != len(second_word):
             return False
